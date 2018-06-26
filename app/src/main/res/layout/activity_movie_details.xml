@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linear_movie_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/light_brown_texture"
+        android:orientation="vertical"
+        tools:context=".MovieDetailsActivity">
+
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="0dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icy_mountains" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ivPoster"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TITLE"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+        />
+
+
+        <RatingBar
+                android:id="@+id/ratingBarResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:numStars="5"
+                android:layout_gravity="center"
+                android:isIndicator="true"
+                android:stepSize="0.5"
+                android:layout_centerHorizontal="true"
+        />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/ratingBarResult"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="10dp"
+            android:paddingTop="0dp"
+            android:textColor="#000"
+            android:textSize="15dp"
+            app:trimMode="trimModeLine"
+            app:trimLines="4"
+            app:colorClickableText="#0000FF"
+            app:trimExpandedText="Read More"
+            app:trimCollapsedText="Show Less"/>
+         <!--<TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_below="@+id/ratingBarResult"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:paddingTop="0dp"
+                android:text="Movie plot for description"
+                android:textColor="#000"
+                android:textSize="15dp"
+         />-->
+    </RelativeLayout>
+</ScrollView>
